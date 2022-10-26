@@ -21,17 +21,19 @@ VALUES
     );
 
 INSERT INTO
-    "project" ("title", "description", "picture")
+    "project" ("title", "description", "picture", "link")
 VALUES
     (
-        'Nom du projet',
+        'Nom du projet 1',
         'description du projet',
-        'http://localhost:3001/public/images/work1.jpg'
+        'http://localhost:3001/public/images/work1.jpg',
+        'http://jtdev.fr'
     ),
     (
-        'Nom du projet',
+        'Nom du projet 2',
         'description du projet',
-        'http://localhost:3001/public/images/work1.jpg'
+        'http://localhost:3001/public/images/work1.jpg',
+        'http://jtdev.fr'
     );
 
 -- On enregistre les transactions en BDD si est seulement si tout c'est bien passé.

@@ -8,6 +8,7 @@ Project.init(
     title: DataTypes.TEXT,
     description: DataTypes.TEXT,
     picture: DataTypes.TEXT,
+    link: DataTypes.TEXT,
   },
   {
     sequelize,

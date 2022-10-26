@@ -16,7 +16,8 @@ CREATE TABLE IF NOT EXISTS "project" (
     "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "title" TEXT NOT NULL DEFAULT '',
     "description" TEXT NOT NULL DEFAULT '',
-    "picture" TEXT NOT NULL DEFAULT ''
+    "picture" TEXT NOT NULL DEFAULT '',
+    "link" TEXT NOT NULL DEFAULT ''
 );
 
 -- On enregistre les transactions en BDD si est seulement si tout c'est bien passé.
