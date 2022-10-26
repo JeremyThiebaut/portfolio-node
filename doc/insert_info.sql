@@ -20,6 +20,20 @@ VALUES
         'titre 3'
     );
 
+INSERT INTO
+    "project" ("title", "description", "picture")
+VALUES
+    (
+        'Nom du projet',
+        'description du projet',
+        'http://localhost:3001/public/images/work1.jpg'
+    ),
+    (
+        'Nom du projet',
+        'description du projet',
+        'http://localhost:3001/public/images/work1.jpg'
+    );
+
 -- On enregistre les transactions en BDD si est seulement si tout c'est bien passé.
 -- Cette instruction signe la fin du fichier.
 COMMIT;

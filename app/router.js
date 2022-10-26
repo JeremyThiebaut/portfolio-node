@@ -1,5 +1,6 @@
 const express = require("express");
-const carouselController = require("./controllers/carouselController.js");
+const carouselController = require("./controllers/carouselController");
+const projectController = require("./controllers/projectController");
 const router = express.Router();
 
 const port = process.env.PORT || 8080;
@@ -13,11 +14,13 @@ router.get("/", (request, response) => {
       <div>Désormais, tu dois venir utiliser l'API</div>
       <ul style="display: inline-block; margin-top: .2em">
         <li>carousel : <code>GET http://localhost:${port}/carousel</code></li>
+        <li>project : <code>GET http://localhost:${port}/project</code></li>
       </ul>
     </div>
   `);
 });
 
 router.get("/carousel", carouselController.getInfoCarousel);
+router.get("/project", projectController.getDataProject);
 
 module.exports = router;

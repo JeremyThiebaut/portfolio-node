@@ -2,7 +2,8 @@
 BEGIN;
 
 -- Nous supprimerons ensuite les tables 'si elles existent', pour pouvoir à chaque fois retravailler sur une base saine.
-DROP TABLE IF EXISTS "carousel";
+DROP TABLE IF EXISTS "carousel",
+"project";
 
 -- Ensuite on la (re)crée
 CREATE TABLE IF NOT EXISTS "carousel" (
@@ -10,6 +11,12 @@ CREATE TABLE IF NOT EXISTS "carousel" (
     "text" TEXT NOT NULL DEFAULT '',
     "image" TEXT NOT NULL DEFAULT '',
     "title" TEXT NOT NULL DEFAULT ''
+);
+CREATE TABLE IF NOT EXISTS "project" (
+    "id" INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    "title" TEXT NOT NULL DEFAULT '',
+    "description" TEXT NOT NULL DEFAULT '',
+    "picture" TEXT NOT NULL DEFAULT ''
 );
 
 -- On enregistre les transactions en BDD si est seulement si tout c'est bien passé.
