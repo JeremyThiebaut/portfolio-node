@@ -34,8 +34,8 @@ const carouselController = {
       return;
     }
 
-    console.log(carousel, project);
-    response.json({ carousel, project });
+    console.log(carousel, project, myDescription);
+    response.json({ carousel, project, myDescription });
   },
 };
 
