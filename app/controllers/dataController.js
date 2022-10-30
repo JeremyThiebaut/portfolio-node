@@ -29,13 +29,23 @@ const carouselController = {
     });
 
     if (!myDescription) {
-      console.log("aucun projet trouvé");
+      console.log("aucune description trouvé");
       response.status(401).end();
       return;
     }
 
-    console.log(carousel, project, myDescription);
-    response.json({ carousel, project, myDescription });
+    const myDocuments = await MyDocuments.findAll({
+      raw: true,
+    });
+
+    if (!myDocuments) {
+      console.log("aucun document trouvé");
+      response.status(401).end();
+      return;
+    }
+
+    console.log(carousel, project, myDescription, myDocuments);
+    response.json({ carousel, project, myDescription, myDocuments });
   },
 };
 

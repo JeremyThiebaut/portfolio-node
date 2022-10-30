@@ -5,9 +5,7 @@ class Carousel extends Model {}
 
 Carousel.init(
   {
-    text: DataTypes.TEXT,
     image: DataTypes.TEXT,
-    title: DataTypes.TEXT,
   },
   {
     sequelize,

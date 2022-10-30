@@ -2,22 +2,16 @@
 BEGIN;
 
 INSERT INTO
-    "carousel" ("text", "image", "title")
+    "carousel" ("image")
 VALUES
     (
-        'text 1',
-        'http://localhost:3001/public/images/work1.jpg',
-        'titre 1'
+        'http://localhost:3001/public/images/work1.jpg'
     ),
     (
-        'text 2',
-        'http://localhost:3001/public/images/work2.jpg',
-        'titre 2'
+        'http://localhost:3001/public/images/work2.jpg'
     ),
     (
-        'text 3',
-        'http://localhost:3001/public/images/work3.jpg',
-        'titre 3'
+        'http://localhost:3001/public/images/work3.jpg'
     );
 
 INSERT INTO
@@ -50,6 +44,22 @@ VALUES
     ),
     (
         'J''aime découvrir, apprendre, expérimenter de nouvelles techniques au fur et à mesure de mes projets.'
+    );
+
+INSERT INTO
+    "muDocuments" ("link", "description", "pictures", "title")
+VALUES
+    (
+        'http://localhost:3001/public/pdf/CV-Thiebaut-Jeremy.png',
+        'Mon CV',
+        'http://localhost:3001/public/pdf/CV-Thiebaut-Jeremy.pdf',
+        'CV de Jérémy THIEBAUT'
+    ),
+    (
+        'Lettre-de-recommandation.png',
+        'Ma lettre de recommandation',
+        'Lettre-de-recommandation.pdf',
+        'Lettre de recommandation de Jérémy THIEBAUT'
     );
 
 -- On enregistre les transactions en BDD si est seulement si tout c'est bien passé.
